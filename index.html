@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday ✦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Comfortaa:wght@500;600;700&family=Nunito:wght@700;800;900&family=Patrick+Hand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="experience.css" />
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-heart">♥</div>
+  </div>
+
+  <div class="bg-decor" aria-hidden="true">
+    <span class="float-heart" style="--x: 12%; --y: 18%; --d: 0s; --s: 0.9rem">♥</span>
+    <span class="float-heart" style="--x: 78%; --y: 12%; --d: 1.2s; --s: 1.1rem">♥</span>
+    <span class="float-heart" style="--x: 88%; --y: 65%; --d: 2s; --s: 0.75rem">♥</span>
+    <span class="float-heart" style="--x: 8%; --y: 72%; --d: 0.8s; --s: 1rem">♥</span>
+    <span class="float-heart" style="--x: 45%; --y: 8%; --d: 1.8s; --s: 0.65rem">♥</span>
+    <span class="sparkle" style="--x: 25%; --y: 40%; --d: 0.5s"></span>
+    <span class="sparkle" style="--x: 62%; --y: 55%; --d: 1.5s"></span>
+    <span class="sparkle" style="--x: 92%; --y: 35%; --d: 2.2s"></span>
+  </div>
+
+  <div class="confetti-wrap" id="confettiWrap" aria-hidden="true"></div>
+
+  <!-- Login screen -->
+  <main class="login-page screen active" id="loginScreen">
+    <section class="left-panel">
+      <div class="photo-bear-group">
+        <div class="polaroid-wrap anim-item" style="--delay: 0.1s">
+          <div class="polaroid polaroid-premium">
+            <div class="polaroid-glow" aria-hidden="true"></div>
+            <div class="polaroid-tape" aria-hidden="true"></div>
+            <div class="polaroid-tape polaroid-tape-right" aria-hidden="true"></div>
+            <div class="polaroid-inner">
+              <div class="polaroid-photo" id="photoPlaceholder">
+                <div class="photo-shine" aria-hidden="true"></div>
+                <img src="img3.jpeg" alt="Our photo" />
+              </div>
+            </div>
+            <p class="polaroid-caption">♡ us</p>
+          </div>
+        </div>
+
+        <div class="pig-wrap anim-item" style="--delay: 0.35s">
+          <svg class="pink-pig" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- ears -->
+            <ellipse cx="52" cy="52" rx="22" ry="28" fill="#ff9ec8" stroke="#ff6bab" stroke-width="2" transform="rotate(-25 52 52)"/>
+            <ellipse cx="148" cy="52" rx="22" ry="28" fill="#ff9ec8" stroke="#ff6bab" stroke-width="2" transform="rotate(25 148 52)"/>
+            <ellipse cx="52" cy="52" rx="12" ry="16" fill="#ffb8d9" transform="rotate(-25 52 52)"/>
+            <ellipse cx="148" cy="52" rx="12" ry="16" fill="#ffb8d9" transform="rotate(25 148 52)"/>
+            <!-- head -->
+            <ellipse cx="100" cy="95" rx="68" ry="62" fill="#ffb3d9" stroke="#ff6bab" stroke-width="2.5"/>
+            <!-- snout -->
+            <ellipse cx="100" cy="118" rx="32" ry="26" fill="#ff8ec0"/>
+            <ellipse cx="100" cy="118" rx="26" ry="20" fill="#ff7ab5"/>
+            <circle cx="88" cy="114" r="5" fill="#d63384"/>
+            <circle cx="112" cy="114" r="5" fill="#d63384"/>
+            <circle cx="89" cy="113" r="1.5" fill="#fff" opacity="0.6"/>
+            <circle cx="113" cy="113" r="1.5" fill="#fff" opacity="0.6"/>
+            <!-- eyes -->
+            <ellipse cx="72" cy="82" rx="11" ry="13" fill="#2d1b2e"/>
+            <ellipse cx="128" cy="82" rx="11" ry="13" fill="#2d1b2e"/>
+            <circle cx="75" cy="78" r="4" fill="#fff"/>
+            <circle cx="131" cy="78" r="4" fill="#fff"/>
+            <circle cx="76" cy="79" r="1.5" fill="#fff"/>
+            <circle cx="132" cy="79" r="1.5" fill="#fff"/>
+            <!-- blush -->
+            <ellipse cx="58" cy="102" rx="12" ry="8" fill="#ff6bab" opacity="0.35"/>
+            <ellipse cx="142" cy="102" rx="12" ry="8" fill="#ff6bab" opacity="0.35"/>
+            <!-- body -->
+            <ellipse cx="100" cy="168" rx="52" ry="38" fill="#ffb3d9" stroke="#ff6bab" stroke-width="2"/>
+            <!-- legs -->
+            <ellipse cx="68" cy="192" rx="14" ry="10" fill="#ff9ec8"/>
+            <ellipse cx="132" cy="192" rx="14" ry="10" fill="#ff9ec8"/>
+            <!-- tail curl -->
+            <path d="M 152 155 Q 178 148 182 128 Q 186 108 170 100" fill="none" stroke="#ff6bab" stroke-width="4" stroke-linecap="round"/>
+            <!-- crown bow -->
+            <path d="M 82 38 Q 100 22 118 38 L 112 48 Q 100 40 88 48 Z" fill="#ff4081"/>
+            <circle cx="100" cy="44" r="6" fill="#ffeb3b" stroke="#ffc107" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="right-panel">
+      <div class="keypad-section anim-item" style="--delay: 0.2s">
+        <div class="name-3d-bg" aria-hidden="true">
+          <div class="name-3d-wrap">
+            <span class="name-3d-shadow">shrijaa</span>
+            <span class="name-3d-depth">shrijaa</span>
+            <span class="name-3d-main">shrijaa</span>
+          </div>
+        </div>
+
+        <div class="pass-label">enter code ♥</div>
+
+        <div class="code-row">
+          <div class="digit-display" id="digitDisplay">
+            <span class="digit-box heart-digit" data-idx="0"><span class="heart-shape" aria-hidden="true"></span><span class="digit-char"></span></span>
+            <span class="digit-box heart-digit" data-idx="1"><span class="heart-shape" aria-hidden="true"></span><span class="digit-char"></span></span>
+            <span class="digit-box heart-digit" data-idx="2"><span class="heart-shape" aria-hidden="true"></span><span class="digit-char"></span></span>
+            <span class="digit-box heart-digit" data-idx="3"><span class="heart-shape" aria-hidden="true"></span><span class="digit-char"></span></span>
+            <span class="digit-box heart-digit" data-idx="4"><span class="heart-shape" aria-hidden="true"></span><span class="digit-char"></span></span>
+          </div>
+          <button type="button" class="toggle-vis" id="toggleVis" title="Show / hide code" aria-label="Toggle password visibility">
+            <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" d="M3 3l18 18M10.5 10.7a4 4 0 005.8 5.8M7.8 7.8C6.2 9 4.5 12 4.5 12s2 5 7.5 5c1.5 0 2.8-.4 3.9-1.1M14 14c1.2-.9 2-2.2 2.5-3.5"/>
+            </svg>
+          </button>
+          <button type="button" class="clear-btn" id="clearBtn" title="Clear code" aria-label="Clear entered code">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/>
+            </svg>
+            <span>Clear</span>
+          </button>
+        </div>
+
+        <p class="status-msg" id="statusMsg" aria-live="polite"></p>
+
+        <div class="keypad anim-keys" id="keypad">
+          <button type="button" class="key" data-key="1">1</button>
+          <button type="button" class="key" data-key="2">2</button>
+          <button type="button" class="key" data-key="3">3</button>
+          <button type="button" class="key" data-key="4">4</button>
+          <button type="button" class="key" data-key="5">5</button>
+          <button type="button" class="key" data-key="6">6</button>
+          <button type="button" class="key" data-key="7">7</button>
+          <button type="button" class="key" data-key="8">8</button>
+          <button type="button" class="key" data-key="9">9</button>
+          <button type="button" class="key" data-key="*">*</button>
+          <button type="button" class="key" data-key="0">0</button>
+          <button type="button" class="key" data-key="#">#</button>
+        </div>
+
+        <p class="hint anim-item" style="--delay: 0.55s">
+          <span class="hint-tag">hint</span>
+          <span class="hint-text">ur birthday date</span>
+        </p>
+
+        <button type="button" class="next-btn" id="nextBtn" disabled>
+          <span class="next-btn-text">Next</span>
+          <svg class="next-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Birthday Experience -->
+  <section class="experience" id="birthdayExperience" hidden aria-label="Birthday surprise">
+    <div class="exp-bg" id="expBg"></div>
+    <div class="exp-confetti" id="expConfetti" aria-hidden="true"></div>
+
+    <!-- 1 · Pig entrance + celebration -->
+    <div class="exp-stage active" data-stage="entrance">
+      <div class="entrance-sparkles" aria-hidden="true"></div>
+      <h1 class="entrance-title" id="entranceTitle">
+        <span class="title-letter" style="--i:0">H</span><span class="title-letter" style="--i:1">A</span><span class="title-letter" style="--i:2">P</span><span class="title-letter" style="--i:3">P</span><span class="title-letter" style="--i:4">Y</span>
+        <span class="title-space"></span>
+        <span class="title-letter" style="--i:5">B</span><span class="title-letter" style="--i:6">I</span><span class="title-letter" style="--i:7">R</span><span class="title-letter" style="--i:8">T</span><span class="title-letter" style="--i:9">H</span><span class="title-letter" style="--i:10">D</span><span class="title-letter" style="--i:11">A</span><span class="title-letter" style="--i:12">Y</span><span class="title-letter" style="--i:13">!</span>
+      </h1>
+      <div class="entrance-scene" id="entranceScene">
+        <div class="entrance-pig-wrap" id="entrancePig">
+          <svg class="entrance-pig" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="52" cy="52" rx="22" ry="28" fill="#ff9ec8" stroke="#ff6bab" stroke-width="2" transform="rotate(-25 52 52)"/>
+            <ellipse cx="148" cy="52" rx="22" ry="28" fill="#ff9ec8" stroke="#ff6bab" stroke-width="2" transform="rotate(25 148 52)"/>
+            <ellipse cx="52" cy="52" rx="12" ry="16" fill="#ffb8d9" transform="rotate(-25 52 52)"/>
+            <ellipse cx="148" cy="52" rx="12" ry="16" fill="#ffb8d9" transform="rotate(25 148 52)"/>
+            <ellipse cx="100" cy="95" rx="68" ry="62" fill="#ffb3d9" stroke="#ff6bab" stroke-width="2.5"/>
+            <ellipse cx="100" cy="118" rx="32" ry="26" fill="#ff8ec0"/>
+            <ellipse cx="100" cy="118" rx="26" ry="20" fill="#ff7ab5"/>
+            <circle cx="88" cy="114" r="5" fill="#d63384"/><circle cx="112" cy="114" r="5" fill="#d63384"/>
+            <ellipse cx="72" cy="82" rx="11" ry="13" fill="#2d1b2e"/><ellipse cx="128" cy="82" rx="11" ry="13" fill="#2d1b2e"/>
+            <circle cx="75" cy="78" r="4" fill="#fff"/><circle cx="131" cy="78" r="4" fill="#fff"/>
+            <ellipse cx="58" cy="102" rx="12" ry="8" fill="#ff6bab" opacity="0.35"/>
+            <ellipse cx="142" cy="102" rx="12" ry="8" fill="#ff6bab" opacity="0.35"/>
+            <ellipse cx="100" cy="168" rx="52" ry="38" fill="#ffb3d9" stroke="#ff6bab" stroke-width="2"/>
+            <ellipse cx="68" cy="192" rx="14" ry="10" fill="#ff9ec8"/><ellipse cx="132" cy="192" rx="14" ry="10" fill="#ff9ec8"/>
+            <path d="M 152 155 Q 178 148 182 128 Q 186 108 170 100" fill="none" stroke="#ff6bab" stroke-width="4" stroke-linecap="round"/>
+            <path d="M 82 38 Q 100 22 118 38 L 112 48 Q 100 40 88 48 Z" fill="#ff4081"/>
+            <circle cx="100" cy="44" r="6" fill="#ffeb3b" stroke="#ffc107" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="entrance-table" id="entranceTable">
+          <div class="entrance-mini-cake">
+            <div class="mini-candles">
+              <span class="mini-flame"></span><span class="mini-flame"></span><span class="mini-flame"></span>
+            </div>
+            <div class="mini-tier mini-tier-top"></div>
+            <div class="mini-tier mini-tier-bot"></div>
+            <div class="mini-plate"></div>
+          </div>
+        </div>
+      </div>
+      <p class="entrance-sub" id="entranceSub">Someone special brought your cake ♥</p>
+      <button type="button" class="exp-btn exp-next" id="entranceNext" hidden>Next</button>
+    </div>
+
+    <!-- 2 · Blow & cut cake -->
+    <div class="exp-stage" data-stage="cake">
+      <h2 class="cake-wish-title" id="cakeWishTitle">Make a wish</h2>
+      <div class="cake-scene-wrap">
+        <div class="wind-burst" id="windBurst" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="big-cake" id="bigCake">
+          <div class="big-candles" id="bigCandles">
+            <div class="big-candle"><div class="flame"></div><div class="stick"></div></div>
+            <div class="big-candle"><div class="flame"></div><div class="stick"></div></div>
+            <div class="big-candle"><div class="flame"></div><div class="stick"></div></div>
+            <div class="big-candle"><div class="flame"></div><div class="stick"></div></div>
+            <div class="big-candle"><div class="flame"></div><div class="stick"></div></div>
+            <div class="big-candle"><div class="flame"></div><div class="stick"></div></div>
+            <div class="big-candle"><div class="flame"></div><div class="stick"></div></div>
+          </div>
+          <div class="big-cake-body">
+            <div class="cake-tier cake-tier-top">
+              <div class="cake-drip drip-top"></div>
+              <div class="cake-sprinkles"></div>
+            </div>
+            <div class="cake-tier cake-tier-bottom">
+              <div class="cake-drip drip-bottom"></div>
+              <div class="cake-hearts-deco" aria-hidden="true">♥ ♥ ♥</div>
+              <button type="button" class="blow-btn" id="blowBtn">BLOW</button>
+            </div>
+            <div class="cake-slice" id="cakeSlice"></div>
+          </div>
+          <div class="big-cake-plate"></div>
+        </div>
+      </div>
+      <div class="cake-actions">
+        <button type="button" class="exp-btn cake-action-btn" id="cutCakeBtn" hidden>Cut the Cake</button>
+      </div>
+    </div>
+
+    <!-- 3 · Wish after cut -->
+    <div class="exp-stage" data-stage="wish">
+      <div class="wish-bg-text" aria-hidden="true">happy birthday sisyyyyy</div>
+      <div class="wish-content">
+        <div class="wish-star-deco">✦</div>
+        <h2 class="wish-heading">Your Wish</h2>
+        <div class="wish-card">
+          <p class="wish-message" id="wishMessage"></p>
+        </div>
+        <p class="wish-sign" id="wishSign">— with all my love ♥</p>
+      </div>
+      <button type="button" class="exp-btn exp-next" id="wishNext">Open Your Gifts →</button>
+    </div>
+
+    <!-- 4 · Gift choice -->
+    <div class="exp-stage" data-stage="gifts">
+      <div class="gifts-corner gifts-corner-l" aria-hidden="true">🐷♥</div>
+      <div class="gifts-corner gifts-corner-r" aria-hidden="true">♥🐷</div>
+      <h2 class="gifts-title">These are for you!</h2>
+      <p class="gifts-sub">Choose one to open</p>
+      <div class="gifts-grid">
+        <button type="button" class="gift-card gift-card-camera" data-gift="camera" aria-label="Open photos and timeline">
+          <div class="gift-icon gift-camera">
+            <div class="gift-icon-bg" aria-hidden="true"></div>
+            <svg viewBox="0 0 80 70" aria-hidden="true">
+              <rect x="8" y="22" width="64" height="42" rx="8" fill="#f5d5b8" stroke="#c9a06c" stroke-width="2"/>
+              <circle cx="40" cy="43" r="14" fill="#fff" stroke="#c9a06c" stroke-width="2"/>
+              <circle cx="40" cy="43" r="8" fill="#e8c4a0"/>
+              <rect x="28" y="14" width="24" height="12" rx="3" fill="#f5d5b8" stroke="#c9a06c" stroke-width="2"/>
+              <circle cx="58" cy="32" r="4" fill="#ff4081"/>
+            </svg>
+            <span class="gift-flower">🌸</span>
+          </div>
+          <span class="gift-label">Camera</span>
+          <span class="gift-desc">our photos & timeline</span>
+        </button>
+        <button type="button" class="gift-card" data-gift="bottle" aria-label="Open thank you letter">
+          <div class="gift-icon gift-bottle">
+            <svg viewBox="0 0 60 90" aria-hidden="true">
+              <path d="M22 8h16v12c8 4 12 14 12 26v38c0 4-4 6-8 6H18c-4 0-8-2-8-6V46c0-12 4-22 12-26V8z" fill="rgba(255,255,255,0.5)" stroke="#c9a06c" stroke-width="2"/>
+              <rect x="20" y="2" width="20" height="10" rx="3" fill="#8d6e63"/>
+              <rect x="24" y="40" width="12" height="28" rx="2" fill="#fff8e1" stroke="#e0c080" stroke-width="1"/>
+              <text x="30" y="52" text-anchor="middle" font-size="8" fill="#e53935">♥</text>
+            </svg>
+          </div>
+          <span class="gift-label">Bottle</span>
+        </button>
+        <button type="button" class="gift-card gift-card-star" data-gift="star" aria-label="Open star surprise">
+          <div class="gift-icon gift-star">
+            <div class="gift-icon-bg gift-icon-bg-star" aria-hidden="true"></div>
+            <svg viewBox="0 0 80 80" aria-hidden="true">
+              <polygon points="40,5 48,28 72,28 53,44 61,68 40,54 19,68 27,44 8,28 32,28" fill="#ffb3d9" stroke="#ff6bab" stroke-width="2"/>
+              <circle cx="32" cy="38" r="2" fill="#333"/><circle cx="48" cy="38" r="2" fill="#333"/>
+              <path d="M 34 48 Q 40 54 46 48" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"/>
+              <ellipse cx="26" cy="44" rx="4" ry="2.5" fill="#ff8ec0" opacity="0.5"/>
+              <ellipse cx="54" cy="44" rx="4" ry="2.5" fill="#ff8ec0" opacity="0.5"/>
+            </svg>
+          </div>
+          <span class="gift-label">Star</span>
+          <span class="gift-desc">a surprise just for you</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sub: Camera / Timeline -->
+    <div class="exp-sub camera-sub" data-sub="camera" hidden>
+      <button type="button" class="sub-back" data-back aria-label="Go back">← Back</button>
+
+      <header class="camera-header">
+        <div class="camera-header-icon" aria-hidden="true">📸</div>
+        <h2 class="sub-title camera-title">Our Moments</h2>
+        <p class="sub-sub camera-subtitle">Every chapter with you is my favourite</p>
+      </header>
+
+      <div class="camera-tabs" role="tablist">
+        <button type="button" class="camera-tab active" data-tab="photos" role="tab" aria-selected="true">Photos</button>
+        <button type="button" class="camera-tab" data-tab="timeline" role="tab" aria-selected="false">Timeline</button>
+      </div>
+
+      <div class="camera-panel active" data-panel="photos" role="tabpanel">
+        <div class="camera-featured" id="cameraFeatured"></div>
+        <div class="camera-film-wrap">
+          <p class="film-label"><span class="film-perf" aria-hidden="true">♥ ♥ ♥</span> memories <span class="film-perf" aria-hidden="true">♥ ♥ ♥</span></p>
+          <div class="camera-film-strip">
+            <div class="film-track" id="photoGallery"></div>
+          </div>
+          <div class="camera-dots" id="cameraDots"></div>
+        </div>
+      </div>
+
+      <div class="camera-panel" data-panel="timeline" role="tabpanel" hidden>
+        <div class="timeline-intro">
+          <span class="timeline-intro-line"></span>
+          <span class="timeline-intro-text">our story</span>
+          <span class="timeline-intro-line"></span>
+        </div>
+        <div class="timeline-journey" id="timelineTrack"></div>
+      </div>
+
+      <div class="photo-lightbox" id="photoLightbox" hidden aria-hidden="true">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+        <div class="lightbox-inner">
+          <img src="" alt="" id="lightboxImg" />
+          <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+        <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <!-- Sub: Letter -->
+    <div class="exp-sub letter-sub-container" data-sub="letter" hidden>
+      <button type="button" class="sub-back" data-back aria-label="Go back">← Back</button>
+      
+      <!-- Interactive uncork view -->
+      <div class="bottle-uncork-view" id="bottleUncorkView">
+        <div class="sea-stars" id="seaStars"></div>
+        <div class="ocean-waves">
+          <svg class="wave" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+            </defs>
+            <g class="parallax-waves">
+              <use href="#gentle-wave" x="48" y="0" fill="rgba(173, 20, 87, 0.15)" />
+              <use href="#gentle-wave" x="48" y="3" fill="rgba(244, 143, 177, 0.25)" />
+              <use href="#gentle-wave" x="48" y="5" fill="rgba(252, 228, 236, 0.4)" />
+              <use href="#gentle-wave" x="48" y="7" fill="#faf9f7" />
+            </g>
+          </svg>
+        </div>
+        
+        <div class="floating-bottle-wrap" id="floatingBottle">
+          <div class="bottle-glow"></div>
+          <div class="glass-bottle" id="bottleClickArea">
+            <div class="bottle-cork" id="bottleCork"></div>
+            <div class="bottle-neck"></div>
+            <div class="bottle-body-main">
+              <div class="rolled-parchment" id="rolledParchment">
+                <div class="parchment-tie">♥</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="uncork-instructions">
+          <p class="uncork-prompt">You found a drift bottle floating in the sea of memories...</p>
+          <p class="uncork-sub-prompt">Tap the cork to open it! ✉</p>
+        </div>
+      </div>
+
+      <!-- Scrapbook letter view -->
+      <div class="letter-paper-view" id="letterPaperView" hidden>
+        <div class="letter-scrapbook">
+          <!-- Tulip decoration left -->
+          <div class="letter-tulip letter-tulip-left" aria-hidden="true">
+            <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50,70 Q48,95 45,115" fill="none" stroke="#66bb6a" stroke-width="3" stroke-linecap="round"/>
+              <path d="M48,95 Q32,92 37,78 Q42,84 48,95" fill="#81c784"/>
+              <path d="M50,30 C35,30 35,68 50,72 C65,68 65,30 50,30 Z" fill="#ff8a80"/>
+              <path d="M48,34 C30,35 34,68 50,72 C42,60 42,40 48,34 Z" fill="#ff5252"/>
+              <path d="M52,34 C70,35 66,68 50,72 C58,60 58,40 52,34 Z" fill="#ff1744"/>
+            </svg>
+          </div>
+          
+          <!-- Tulip decoration right -->
+          <div class="letter-tulip letter-tulip-right" aria-hidden="true">
+            <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+              <path d="M45,70 Q48,95 50,115" fill="none" stroke="#66bb6a" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M47,90 Q62,88 56,76 Q52,82 47,90" fill="#81c784"/>
+              <path d="M45,35 C32,35 32,68 45,72 C58,68 58,35 45,35 Z" fill="#ffb74d"/>
+              <path d="M43,39 C27,40 30,68 45,72 C38,61 38,43 43,39 Z" fill="#ffa726"/>
+              <path d="M47,39 C63,40 60,68 45,72 C52,61 52,43 47,39 Z" fill="#f57c00"/>
+            </svg>
+          </div>
+
+          <div class="letter-sticker letter-sticker-tl" aria-hidden="true">🌺</div>
+          <div class="letter-sticker letter-sticker-tr" aria-hidden="true">✦ ✦</div>
+          <div class="letter-sticker letter-sticker-bl" aria-hidden="true">♥</div>
+          <div class="letter-sticker letter-sticker-br" aria-hidden="true">🐷</div>
+          
+          <div class="letter-clip" aria-hidden="true"></div>
+          
+          <div class="letter-paper">
+            <p class="letter-dear" id="letterDear">Dear Sisyyyyy,</p>
+            <div class="letter-body" id="letterBody"></div>
+            
+            <svg class="letter-handwritten-divider" viewBox="0 0 300 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10,10 Q80,15 150,10 T290,10" fill="none" stroke="#d4a574" stroke-width="2" stroke-linecap="round"/>
+              <path d="M142,10 Q150,2 158,10" fill="none" stroke="#e91e63" stroke-width="2"/>
+            </svg>
+            
+            <p class="letter-sign" id="letterSign">Forever your biggest fan ♥</p>
+          </div>
+          
+          <div class="letter-photo-wrap">
+            <div class="washi-tape washi-tape-top" aria-hidden="true"></div>
+            <img src="img1.jpg" alt="" class="letter-photo" />
+          </div>
+        </div>
+        <button type="button" class="exp-btn exp-next letter-next" id="letterNext">Next</button>
+      </div>
+    </div>
+
+    <!-- Sub: Star surprise -->
+    <div class="exp-sub star-sub" data-sub="star" hidden>
+      <button type="button" class="sub-back sub-back-star" data-back aria-label="Go back">← Back</button>
+      <div class="star-aurora" aria-hidden="true"></div>
+      <div class="star-sky" id="starSky" aria-hidden="true"></div>
+      <div class="star-hearts-float" id="starHeartsFloat" aria-hidden="true"></div>
+
+      <!-- Constellation Game Screen -->
+      <div class="constellation-game" id="constellationGame">
+        <div class="constellation-board">
+          <svg class="constellation-svg" id="constellationSvg" width="100%" height="100%">
+            <!-- Draw dynamic lines here -->
+          </svg>
+          <div class="constellation-nodes-container" id="constellationNodesContainer">
+            <!-- Interactive star dots will be generated here dynamically by JS -->
+          </div>
+        </div>
+        <div class="game-instruction">
+          <p class="game-prompt">Connect the stars in the night sky... ✨</p>
+          <p class="game-sub-prompt">Draw the constellation to reveal your surprise</p>
+        </div>
+      </div>
+
+      <!-- Star surprise details (revealed after completing the game) -->
+      <div class="star-scene" id="starScene" hidden>
+        <div class="star-hero">
+          <div class="magic-star-wrap" id="interactiveHeroStar">
+            <div class="orbit-ring orbit-ring-1"><span>♥</span></div>
+            <div class="orbit-ring orbit-ring-2"><span>✦</span></div>
+            <div class="magic-star-glow"></div>
+            <svg class="magic-star-svg" viewBox="0 0 100 100" aria-hidden="true">
+              <defs>
+                <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fff9c4"/>
+                  <stop offset="50%" stop-color="#ffeb3b"/>
+                  <stop offset="100%" stop-color="#ff9800"/>
+                </linearGradient>
+              </defs>
+              <polygon points="50,4 61,36 96,36 67,57 78,90 50,68 22,90 33,57 4,36 39,36" fill="url(#starGrad)" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="star-card" id="holoStarCard">
+          <div class="star-card-shine" aria-hidden="true"></div>
+          <div class="star-card-holo-foil" aria-hidden="true"></div>
+          <h2 class="star-title" id="starTitle">You're My Shining Star</h2>
+          <p class="star-message" id="starMessage"></p>
+        </div>
+
+        <div class="star-name-block">
+          <span class="star-name-label">made for</span>
+          <div class="star-name" id="starName">shrijaa</div>
+          <div class="star-pig-mini" aria-hidden="true">
+            <span class="star-mini-icon">🐷</span>
+            <span class="star-mini-heart">♥</span>
+            <span class="star-mini-spark">✦</span>
+          </div>
+        </div>
+
+        <!-- Tactile Cassette Music Player Widget -->
+        <div class="music-player-card">
+          <div class="player-tape-wrap">
+            <div class="cassette-tape">
+              <div class="tape-label">
+                <span class="tape-title">Rattiyan ♡</span>
+                <span class="tape-artist">our soundtrack</span>
+              </div>
+              <div class="tape-spools">
+                <div class="spool spool-l"></div>
+                <div class="spool spool-r"></div>
+              </div>
+            </div>
+          </div>
+          <div class="player-controls">
+            <button type="button" class="player-btn" id="playBtn" aria-label="Play song">
+              <span class="play-icon">▶</span>
+              <span class="pause-icon" hidden>❚❚</span>
+            </button>
+            <div class="player-track-info">
+              <span class="player-song-title">Rattiyan</span>
+              <span class="player-song-status">paused</span>
+            </div>
+          </div>
+          <!-- Dynamic hidden YouTube iframe container -->
+          <div class="hidden-yt-iframe" id="ytPlayerContainer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="experience.js"></script>
+</body>
+</html>
